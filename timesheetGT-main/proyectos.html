@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeSheet - Añadir Proyecto</title>
+    <link rel="stylesheet" href="SP.css">
+    <script src="scriptProyectos.js"></script>
+</head>
+<body>
+    <header><button class="btnvolver"><a href="index.html">X</a></button>
+        <h1>Nuevo Proyecto</h1>
+    </header>
+    <section class="crud-section">
+        <form id="resource-form">
+            <input type="hidden" name="idProy" id="idProy" value="0">
+            <div class="column-l">
+                <label for="name">Nombre:</label>
+                <input class="c" type="text" id="name" name="name" required tabindex="1">
+                <br>
+                <label for="comercial">Responsable comercial:</label>
+                <input class="c" type="text" id="comercial" name="comercial" required tabindex="3">
+                <br>
+                <label for="start-ideal">Fecha de inicio ideal:</label>
+                <input class="c" type="date" id="start-ideal" name="start-ideal" required tabindex="5">
+                <br>
+                <label for="end-ideal">Fecha de fin ideal:</label>
+                <input class="c" type="date" id="end-ideal" name="end-ideal" required tabindex="7">
+            </div>
+            
+            <div class="column-r">
+                <label for="tipo">Tipo:</label>
+                <select class="c1" id="tipo" name="tipo" required tabindex="2">
+                    <option>Proyecto</option>
+                    <option>Mantenimiento</option>
+                </select>
+                <br>
+                <label for="gestion">Responsable de gestión:</label>
+                <input class="c" type="text" id="gestion" name="gestion" required tabindex="4">
+                <br>
+                <label for="start-real">Fecha de inicio real:</label>
+                <input class="c" type="date" id="start-real" name="start-real" required tabindex="6">
+                <br>
+                <label for="end-real">Fecha de fin real:</label>
+                <input class="c" type="date" id="end-real" name="end-real" required tabindex="8">
+                <br><br>
+            </div>
+
+            <button class="btnadd" type="submit" tabindex="9">Almacenar Proyecto</button>
+        </form>
+
+        <div class="contenidos">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th> 
+                        <th>Tipo</th>
+                        <th>Responsable Comercial</th>
+                        <th>Responsable Gestion</th>    
+                        <th>Fecha Inicio Ideal</th>
+                        <th>Fecha Inicio Real</th>
+                        <th>Fecha Final Ideal</th>
+                        <th>Fecha Final Real</th>                  
+                    </tr>
+                </thead>
+                <tbody id="resource-list"></tbody>
+            </table>
+        </div>
+        <div id="respuesta"></div>
+    </section>
+</body>
+</html>

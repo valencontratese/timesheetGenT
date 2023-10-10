@@ -1,0 +1,120 @@
+body {
+    background-color: #4a7c59;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+.contenidos {
+    background-color: #6ba86b;
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.t{
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ec212d;
+}
+
+.tarjetas {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 60px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+  
+.crud-section {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+  
+form label {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+form input {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+form button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+  
+ul {
+    list-style: none;
+    padding: 0;
+}
+  
+li {
+    margin-bottom: 10px;
+}
+  
+.btnadd {
+    background-color: #ec212d;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 100px;
+    margin-top: 5px;
+    border: 0;
+}
+  
+.btnadd:hover {
+    background-color: #c21b26;
+}
+
+.c{
+    width: 291.5px;
+    height: 30px;
+    margin-bottom: 2%;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    border: 0;
+}
+
+.c1{
+    width: 291.5px;
+    height: 35px;
+    margin-bottom: 9%;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    border: 0;
+}
+
+.column-l {
+    width: 45%; /* Ajusta el ancho de las columnas según sea necesario */
+    float: left; /* Esto hace que los contenedores se apilen horizontalmente */
+    margin-right: 5%; /* Espacio entre las columnas */
+}
+
+.column-r {
+    width: 45%; /* Ajusta el ancho de las columnas según sea necesario */
+    float: right; /* Esto hace que los contenedores se apilen horizontalmente */
+    margin-right: 5%; /* Espacio entre las columnas */
+}
+
+/* Clearfix para evitar problemas de altura con los elementos flotantes */
+#resource-form::after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeSheet - Añadir Recursos</title>
+    <link rel="stylesheet" href="SR.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header><button class="btnvolver"><a href="index.html">X</a></button>
+        <h1>Nuevo Recurso</h1>
+        <br>
+    </header>
+    <section class="crud-section">
+        <form id="resource-form">
+            <input name="idRec" id="idRec" value="0" type="hidden">
+            <div class="column-l">
+                <label for="name">Nombre:</label>
+                <input class="c" type="text" id="name" name="name" required tabindex="1">
+                <br>
+                <label for="availability">Disponibilidad (en horas):</label>
+                <select class="c1" id="availability" name="availability" required tabindex="3">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+
+            <div class="column-r">
+                <label for="surname">Apellido:</label>
+                <input class="c" type="text" id="surname" name="surname" required tabindex="2">
+                <br>
+                <label for="role">Rol:</label>
+                <input class="c" type="text" id="role" name="role" required tabindex="4">
+                <br><br>
+            </div>
+
+            <button class="btnadd"  tabindex="5">Almacenar Recurso</button>
+        </form>
+        <div class="contenidos">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Disponibilidad Horaria</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="resource-list"></tbody>
+            </table>
+        </div>
+        <div id="respuesta"></div>
+    </section>
+</body>
+</html>
