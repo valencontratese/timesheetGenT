@@ -105,6 +105,15 @@ li {
     border: 0;
 }
 
+.cText{
+    width: 291.5px;
+    height: 100px;
+    margin-bottom: 2%;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    border: 0;
+}
+
 .column-l {
     width: 45%; /* Ajusta el ancho de las columnas según sea necesario */
     float: left; /* Esto hace que los contenedores se apilen horizontalmente */
@@ -122,4 +131,12 @@ li {
     content: "";
     display: table;
     clear: both;
+}
+a
+{
+    text-decoration: none;
+}
+a.hover
+{
+    text-decoration: none;
 }

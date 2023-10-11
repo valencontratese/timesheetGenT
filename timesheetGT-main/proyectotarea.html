@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimeSheet - Añadir Proyecto</title>
+    <title>TimeSheet - Añadir Tarea al proyecto</title>
     <link rel="stylesheet" href="SP.css">
-    <script src="scriptRecursoProyecto.js"></script>
+    <script src="scriptTareas.js"></script>
 </head>
 <body>
     <header><button class="btnvolver"><a href="index.html">&nbsp;&nbsp;X&nbsp;&nbsp;</a></button>
-        <h1>Asignar recursos al proyecto</h1>
+        <h1>Asignar tarea al proyecto</h1>
     </header>
     <section class="crud-section">
         <form id="resource-form">            
-            <input type="hidden" id="idRecProy" value="0">
+            <input type="hidden" id="idTarea" value="0">
             <div class="column-l">
                 <label for="proyecto">Proyecto:</label>
-                <select class="c1" id="proyecto" name="proyecto" required tabindex="1">
+                <select class="c1" id="proyecto" name="proyecto" onchange="cargarRecursos(0);" required tabindex="1">
                     <option></option>
                 </select>
                 <br>
-                <label for="asignacion">% de asignaci&oacute;n:</label>
-                <select class="c1" id="asignacion" name="asignacion" required tabindex="3">
+                <label for="tarea">Tarea:</label>
+                <input class="c1" type="text" id="tarea" name="tarea" required tabindex="4">
+                <br>
+                <label for="esfuerzo">Esfuerzo:</label>
+                <select class="c1" id="esfuerzo" name="esfuerzo" required tabindex="3">
                 </select>                
             </div>
             
             <div class="column-r">
                 <label for="comercial">Recurso:</label>
-                <select class="c1" id="recurso" name="recurso" onchange="cargarAsignacion(0, 0);" required tabindex="2">
+                <select class="c1" id="recurso" name="recurso" onchange="cargarEsfuerzo(0, 0);" required tabindex="2">
                     <option></option>
                 </select>
+                <br>
+                <label for="descripcion">Descripci&oacute;n:</label>
+                <textarea class="cText" id="descripcion" name="descripcion" required tabindex="4"></textarea>
             </div>
-            <button class="btnadd" type="submit" tabindex="4">Almacenar relaci&oacute;n</button>
+            <button class="btnadd" type="submit" tabindex="4">Almacenar Tarea</button>
         </form>
 
         <div class="contenidos">
@@ -40,7 +46,8 @@
                     <tr>
                         <th>Proyecto</th> 
                         <th>Recurso</th>
-                        <th>Asiganci&oacute;n</th>                                       
+                        <th>Tarea</th>
+                        <th>Esfuerzo (h)</th>
                     </tr>
                 </thead>
                 <tbody id="resource-list"></tbody>

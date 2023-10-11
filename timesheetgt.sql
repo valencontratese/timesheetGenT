@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2023 a las 21:19:25
+-- Tiempo de generación: 11-10-2023 a las 20:28:06
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -44,7 +44,7 @@ CREATE TABLE `proyecto` (
 --
 
 INSERT INTO `proyecto` (`id`, `nombre`, `tipo`, `comercial`, `gestion`, `fechainicioideal`, `fechainicioreal`, `fechafinIdeal`, `fechafinreal`) VALUES
-(1, 'Web Villavicencio', 'Proyecto', 'Miguel', 'Laura', '2023-10-10', '2023-10-27', '2023-10-12', '2023-10-31'),
+(1, 'Web Villavicencio', 'Proyecto', 'Miguel', 'Laura', '2023-10-10', '2023-10-27', '2023-10-12', '2023-11-03'),
 (2, 'Web Odol', 'Proyecto', 'Fabrizio', 'Marta', '2023-10-09', '2023-10-10', '2023-10-19', '2023-11-01');
 
 -- --------------------------------------------------------
@@ -67,7 +67,8 @@ CREATE TABLE `proyecto_recurso` (
 INSERT INTO `proyecto_recurso` (`idRecProy`, `idProyecto`, `idRecurso`, `disponibilidad`) VALUES
 (1, 2, 4, 75),
 (2, 1, 1, 50),
-(3, 1, 5, 25);
+(3, 1, 5, 25),
+(5, 1, 4, 25);
 
 -- --------------------------------------------------------
 
@@ -106,8 +107,20 @@ CREATE TABLE `tareas` (
   `idRecurso` int(11) NOT NULL,
   `idProyecto` int(11) NOT NULL,
   `esfuerzo` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
   `descripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tareas`
+--
+
+INSERT INTO `tareas` (`id`, `idRecurso`, `idProyecto`, `esfuerzo`, `nombre`, `descripcion`) VALUES
+(1, 4, 1, 1, 'Tarea 1', 'Nueva tarea 1 para Villavicecio con mucho esfuerzo. Algo más raro, que esto es aquello.'),
+(2, 4, 1, 1, 'Tarea 2', 'Asignar tarea al proyecto Asignar tarea al proyecto Asignar tarea al proyecto Asignar tarea al proyecto Asignar tarea al proyecto Asignar tarea al proyecto Asignar tarea al proyecto'),
+(3, 4, 2, 5, 'Tarea 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+(4, 1, 1, 2, 'Tarea 4', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+(5, 1, 1, 2, 'Tarea 5', 'No posee');
 
 --
 -- Índices para tablas volcadas
@@ -151,7 +164,7 @@ ALTER TABLE `proyecto`
 -- AUTO_INCREMENT de la tabla `proyecto_recurso`
 --
 ALTER TABLE `proyecto_recurso`
-  MODIFY `idRecProy` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idRecProy` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `recurso`
@@ -163,7 +176,7 @@ ALTER TABLE `recurso`
 -- AUTO_INCREMENT de la tabla `tareas`
 --
 ALTER TABLE `tareas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
