@@ -5,17 +5,14 @@ body {
     padding: 20px;
   }
   
-.contenidos {
+  .contenidos {
     background-color: #6ba86b;
-    border-radius: 2rem;
     padding: 1rem;
     display: flex;
     flex-direction: row; /* Cambiado a dirección vertical */
-    justify-content: center; /* Centra horizontalmente */
-    max-width: 125%; /* Asegura que no se desborde horizontalmente */
+    justify-content: space-around; /* Centra horizontalmente */
     margin: 0 auto; /* Centra horizontalmente dentro del body */
     box-sizing:content-box;/* Incluye el padding en el ancho total */
-    width: 125%; /* Ocupa el ancho completo del contenedor padre */
 }
 
 .t{
@@ -62,7 +59,21 @@ form button {
     margin-bottom: 10px;
     width: 100%;
 }
-  
+
+.btnvolver {
+    background-color: #ec212d;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 0;
+}
+
+a, a:hover, a:active, a:visited { 
+    color: #fff; 
+    text-decoration: none;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -100,15 +111,6 @@ li {
     width: 291.5px;
     height: 35px;
     margin-bottom: 9%;
-    padding: 0.2rem;
-    border-radius: 1rem;
-    border: 0;
-}
-
-.cText{
-    width: 291.5px;
-    height: 100px;
-    margin-bottom: 2%;
     padding: 0.2rem;
     border-radius: 1rem;
     border: 0;
