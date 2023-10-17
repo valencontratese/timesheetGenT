@@ -5,12 +5,14 @@ body {
     padding: 20px;
   }
   
-.contenidos {
+  .contenidos {
     background-color: #6ba86b;
-    border-radius: 2rem;
     padding: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row; /* Cambiado a dirección vertical */
+    justify-content: space-around; /* Centra horizontalmente */
+    margin: 0 auto; /* Centra horizontalmente dentro del body */
+    box-sizing:content-box;/* Incluye el padding en el ancho total */
 }
 
 .t{
@@ -57,7 +59,21 @@ form button {
     margin-bottom: 10px;
     width: 100%;
 }
-  
+
+.btnvolver {
+    background-color: #ec212d;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 0;
+}
+
+a, a:hover, a:active, a:visited { 
+    color: #fff; 
+    text-decoration: none;
+}
+
 ul {
     list-style: none;
     padding: 0;
